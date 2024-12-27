@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # toonflix
 
 A new Flutter project.
@@ -14,3 +15,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+=======
+# 2024-Flutter-study
+호주 개발을 위해 플러터를 공부해봅시다
+>>>>>>> 1b03e1236db58d6afa088ade73daec80b06e68dc
