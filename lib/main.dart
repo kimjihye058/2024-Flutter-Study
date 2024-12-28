@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Player {
-  String name;
+  String? name;   // 물음표가 붙으면 name이라는 parameter가 있을 수도 있고 없을 수도 있음
 
   Player({required this.name});
 }
