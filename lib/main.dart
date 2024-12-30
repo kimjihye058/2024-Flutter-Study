@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+const taxAmount = 15;   // const: constant는 수정할 수 없고, 컴파일 전에 그 value를 알 수 있는 변수
+const priceAmount = 30;
+
+var finalPrice = taxAmount + priceAmount;
+
 void main() {
   runApp(App());
 }
