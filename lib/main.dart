@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-
-const taxAmount = 15;   // const: constant는 수정할 수 없고, 컴파일 전에 그 value를 알 수 있는 변수
-const priceAmount = 30;
-
-var finalPrice = taxAmount + priceAmount;
+import 'package:toonflix/widgets/button.dart';
 
 void main() {
   runApp(App());
@@ -11,6 +7,8 @@ void main() {
 
 // commit test11
 class App extends StatelessWidget {
+  const App({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,7 +16,7 @@ class App extends StatelessWidget {
           backgroundColor: Color(0xFF181818),
           body: Padding(
             padding: EdgeInsets.symmetric(
-              horizontal: 40,
+              horizontal: 25,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,7 +44,7 @@ class App extends StatelessWidget {
                             color: Color.fromRGBO(255, 255, 255, 0.8),
                             fontSize: 18,
                           ),
-                        ),
+                        )
                       ],
                     )
                   ],
@@ -76,25 +74,18 @@ class App extends StatelessWidget {
                   height: 30,
                 ),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(45),
-                      ),
-                      child: Padding(
-                        padding: EdgeInsets.symmetric(
-                          vertical: 20,
-                          horizontal: 50,
-                        ),
-                        child: Text(
-                          'Transfer',
-                          style: TextStyle(
-                            fontSize: 22,
-                          ),
-                        ),
-                      ),
-                    )
+                    Button(
+                      text: 'Transfer',
+                      bgColor: Color(0xFFF1B33B),
+                      textColor: Colors.black,
+                    ),
+                    Button(
+                      text: 'Request',
+                      bgColor: Color(0xFF1F2123),
+                      textColor: Colors.white,
+                    ),
                   ],
                 )
               ],
