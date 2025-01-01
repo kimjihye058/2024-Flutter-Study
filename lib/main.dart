@@ -92,6 +92,9 @@ class App extends StatelessWidget {
                   height: 100,
                 ),
                 Row(
+                  // Row에서 main은 가로축, cross는 세로축(Colum에서의 main은 세로축)
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
                       'Wallets',
@@ -109,7 +112,10 @@ class App extends StatelessWidget {
                       ),
                     ),
                   ],
-                )
+                ),
+                SizedBox(
+                  height: 20,
+                ),
               ],
             ),
           )),
