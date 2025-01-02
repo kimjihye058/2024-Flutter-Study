@@ -16,12 +16,12 @@ class Button extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: bgColor,
-        borderRadius: BorderRadius.circular(45),
+        borderRadius: BorderRadius.circular(35),
       ),
       child: Padding(
         padding: EdgeInsets.symmetric(
           vertical: 17,
-          horizontal: 35,
+          horizontal: 40,
         ),
         child: Text(
           text,
