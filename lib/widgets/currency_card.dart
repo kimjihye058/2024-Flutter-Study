@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 class CurrencyCard extends StatelessWidget {
   final String name, code, amount;
   final IconData icon;
+  final bool isInverted;
+
+  final _blackColor = const Color(0xFF1F2123);
 
   const CurrencyCard({
     super.key,
@@ -10,6 +13,7 @@ class CurrencyCard extends StatelessWidget {
     required this.code,
     required this.amount,
     required this.icon,
+    required this.isInverted,
   });
 
   @override
@@ -18,7 +22,7 @@ class CurrencyCard extends StatelessWidget {
     return Container(
       clipBehavior: Clip.hardEdge, // 아이콘의 나머지 부분이 숨겨짐
       decoration: BoxDecoration(
-        color: Color(0xFF1F2123),
+        color: isInverted ? Colors.white : _blackColor,
         borderRadius: BorderRadius.circular(20),
       ),
       child: Padding(
@@ -32,7 +36,7 @@ class CurrencyCard extends StatelessWidget {
                 Text(
                   name,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: isInverted ? _blackColor : Colors.white,
                     fontSize: 32,
                     fontWeight: FontWeight.w600,
                   ),
@@ -45,7 +49,7 @@ class CurrencyCard extends StatelessWidget {
                     Text(
                       amount,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: isInverted ? _blackColor : Colors.white,
                         fontSize: 20,
                       ),
                     ),
@@ -55,7 +59,9 @@ class CurrencyCard extends StatelessWidget {
                     Text(
                       code,
                       style: TextStyle(
-                        color: Colors.white.withOpacity(0.8),
+                        color: isInverted
+                            ? _blackColor.withOpacity(0.8)
+                            : Colors.white.withOpacity(0.8),
                         fontSize: 20,
                       ),
                     ),
@@ -70,7 +76,9 @@ class CurrencyCard extends StatelessWidget {
                 offset: Offset(-5, 12), // x좌표, y좌표 설정법
                 child: Icon(
                   icon,
-                  color: Colors.white.withOpacity(0.8),
+                  color: isInverted
+                      ? _blackColor.withOpacity(0.8)
+                      : Colors.white.withOpacity(0.8),
                   size: 80,
                 ),
               ),
