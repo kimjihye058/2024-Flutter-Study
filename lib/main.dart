@@ -15,13 +15,18 @@ class App extends StatefulWidget {
 class _AppState extends State<App> {
   int counter = 0;
 
-  void onClicked() {}
+  void onClicked() {
+    setState(() {
+      // State클래스에게 데이터가 변경되었다고 알리는 함수
+      counter = counter + 1;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: Color(0xFFF4EDDB),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
